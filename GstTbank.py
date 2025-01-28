@@ -583,7 +583,7 @@ class AdaptiveGST(object):
                 if self.sigma is None:
                     print(f'Необходимо задать стандартное отклонение')
                     raise ValueError("sigma must be provided for outcome_type 'mean'")
-                sample_size = int(2 * np.ceil(((z_alpha + z_beta) ** 2 * (self.sigma) ** 2) / ((effect / 100) ** 2)))
+                sample_size = int(2 * np.ceil(((z_alpha + z_beta) ** 2 * (self.sigma) ** 2) / ((effect) ** 2)))
 
             else:
                 print(f'Выбранный тип переменной должен быть либо "bin", либо "mean"')
